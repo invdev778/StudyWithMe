@@ -11,3 +11,10 @@ oauth:
     url:
       auth: https://kauth.kakao.com
       api: https://kapi.kakao.com
+
+  naver:
+     secret: SoH3BzEtFq
+     client-id: JOiWuaZqH5Qj5O4A1m6e
+     url:
+       auth: https://nid.naver.com/
+       api: https://openapi.naver.com/
