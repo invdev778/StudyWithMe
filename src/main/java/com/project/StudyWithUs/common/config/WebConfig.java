@@ -9,9 +9,8 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("http://localhost:8080")
+                .allowedOrigins("http://localhost:3000") // React 앱이 실행되는 도메인
                 .allowedMethods("GET", "POST", "PUT", "DELETE")
-                .allowCredentials(false)
-                .maxAge(3600);
+                .allowedHeaders("*");
     }
 }
