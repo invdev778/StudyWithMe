@@ -11,7 +11,6 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/api/members")
 public class MemberController {
     private final MemberRepository memberRepository;
@@ -22,7 +21,6 @@ public class MemberController {
         return ResponseEntity.ok(memberRepository.findAll());
     }
 
-    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/{accessToken}")
     public ResponseEntity<Member> findByAccessToken(@PathVariable String accessToken) {
         Long memberId = authTokensGenerator.extractMemberId(accessToken);
