@@ -33,6 +33,7 @@ public class OAuthLoginService {
         Member member = Member.builder()
                 .email(oAuthInfoResponse.getEmail())
                 .nickname(oAuthInfoResponse.getNickname())
+                .profile(oAuthInfoResponse.getProfile())
                 .oAuthProvider(oAuthInfoResponse.getOAuthProvider())
                 .build();
 

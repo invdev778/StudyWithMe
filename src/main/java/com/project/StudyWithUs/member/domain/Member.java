@@ -14,18 +14,21 @@ public class Member {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+        private Long id;
 
     private String email;
 
     private String nickname;
 
+    private String profile;
+
     private OAuthProvider oAuthProvider;
 
     @Builder
-    public Member(String email, String nickname, OAuthProvider oAuthProvider) {
+    public Member(String email, String nickname, String profile, OAuthProvider oAuthProvider) {
         this.email = email;
         this.nickname = nickname;
+        this.profile = profile;
         this.oAuthProvider = oAuthProvider;
     }
 }

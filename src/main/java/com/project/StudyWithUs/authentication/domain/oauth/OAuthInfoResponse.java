@@ -4,5 +4,6 @@ package com.project.StudyWithUs.authentication.domain.oauth;
 public interface OAuthInfoResponse {
     String getEmail();
     String getNickname();
+    String getProfile();
     OAuthProvider getOAuthProvider();
 }
