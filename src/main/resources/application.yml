@@ -1,11 +1,11 @@
 spring:
   main:
     allow-bean-definition-overriding: true
-  datasource:
-    url:
-    driver-class-name:
-    name:
-    password:
+  #datasource:
+    #url:
+    #driver-class-name:
+    #name:
+    #password:
   #jpa:
     #database-platform: org.hibernate.dialect.MySQL5Dialect
 
