@@ -1,13 +1,18 @@
 spring:
   main:
     allow-bean-definition-overriding: true
-  #datasource:
-    #url:
-    #driver-class-name:
-    #name:
-    #password:
-  #jpa:
-    #database-platform: org.hibernate.dialect.MySQL5Dialect
+  datasource:
+    url: jdbc:mysql://43.201.83.222/shop?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    name: root
+    password: 1234
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      format_sql: true
+      ddl-auto: create
 
 jwt:
   secret-key: Z29nby10bS1zZXJ2ZXItZGxyamVvYW9yb3JodG9kZ290c3Atam9vbmdhbmduaW0teWvvbHnpbWhpaGFsZ2VveW8K

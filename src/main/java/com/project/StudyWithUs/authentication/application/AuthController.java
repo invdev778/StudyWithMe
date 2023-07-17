@@ -4,6 +4,7 @@ import com.project.StudyWithUs.authentication.domain.AuthTokens;
 import com.project.StudyWithUs.authentication.infra.kakao.KakaoLoginParams;
 
 import com.project.StudyWithUs.authentication.infra.naver.NaverLoginParams;
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -22,5 +23,11 @@ public class AuthController {
     @PostMapping("/naver")
     public ResponseEntity<AuthTokens> loginNaver(@RequestBody NaverLoginParams params) {
         return ResponseEntity.ok(oAuthLoginService.login(params));
+    }
+
+    @PostMapping("/logout")
+    public ResponseEntity logout(HttpSession session) {
+        session.invalidate();
+        return ResponseEntity.ok().body("");
     }
 }

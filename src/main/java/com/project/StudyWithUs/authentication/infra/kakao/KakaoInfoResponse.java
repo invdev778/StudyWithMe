@@ -39,7 +39,9 @@ public class KakaoInfoResponse implements OAuthInfoResponse {
     }
 
     @Override
-    public String getProfile() { return kakaoAccount.profile.profile_image_url; }
+    public String getProfile() {
+        return kakaoAccount.profile.profile_image_url;
+    }
 
     @Override
     public OAuthProvider getOAuthProvider() {
