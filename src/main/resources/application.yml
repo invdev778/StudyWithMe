@@ -2,10 +2,10 @@ spring:
   main:
     allow-bean-definition-overriding: true
   datasource:
-    url: jdbc:mysql://43.201.83.222/shop?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul
+    jdbc-url: jdbc:mysql://43.201.83.222:3306/StudyWithUs
     driver-class-name: com.mysql.cj.jdbc.Driver
-    name: root
-    password: 1234
+    name: koreait
+    password: passwd2023@
   jpa:
     database-platform: org.hibernate.dialect.MySQL5Dialect
     open-in-view: false
