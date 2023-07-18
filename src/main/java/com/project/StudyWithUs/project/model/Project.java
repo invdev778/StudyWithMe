@@ -22,25 +22,25 @@ public class Project {
 
     @JsonIgnore
     @Id
-    @Column(name = "id")
+    //@Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    //@ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     //@JoinColumn(name = "member_id")
     //@OnDelete(action = OnDeleteAction.CASCADE)
-    @Column(name = "member_id")
-    private String member_id;
+    //@Column(name = "member_id")
+    private Member member_id;
 
-    @Column(name = "title")
+    //@Column(name = "title")
     private String title;
 
-    @Column(name = "content")
+    //@Column(name = "content")
     private String content;
 
-    @Column(name = "end_date")
+    //@Column(name = "end_date")
     private Date end_date;
 
-    @Column(name = "rep_image")
+    //@Column(name = "rep_image")
     private String rep_image;
 }
