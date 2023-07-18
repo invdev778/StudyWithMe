@@ -14,7 +14,7 @@ class AuthTokensGeneratorTest {
     private AuthTokensGenerator authTokensGenerator;
 
     @Test
-    @DisplayName("JWT 토큰 생성 성공")
+    @DisplayName("JWT")
     void testGenerate() {
         Long memberId = 0L;
 
@@ -27,7 +27,7 @@ class AuthTokensGeneratorTest {
     }
 
     @Test
-    @DisplayName("JWT 토큰 검증 성공")
+    @DisplayName("JWT")
     void testExtractSubject() {
         Long memberId = 0L;
         AuthTokens authTokens = authTokensGenerator.generate(memberId);
