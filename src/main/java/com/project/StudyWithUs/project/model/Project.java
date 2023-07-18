@@ -20,7 +20,7 @@ import java.util.Date;
 @Table(name = "Project")
 public class Project {
 
-    @JsonIgnore
+    //@JsonIgnore
     @Id
     //@Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,6 +36,7 @@ public class Project {
     private String title;
 
     //@Column(name = "content")
+    @Lob
     private String content;
 
     //@Column(name = "end_date")
