@@ -3,10 +3,7 @@ package com.project.StudyWithUs.project.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.project.StudyWithUs.member.domain.Member;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
@@ -15,6 +12,7 @@ import java.util.Date;
 @Getter
 @Setter
 @Entity
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "Project")
