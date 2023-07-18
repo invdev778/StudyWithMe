@@ -17,7 +17,7 @@ import java.util.Date;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "project")
+@Table(name = "Project")
 public class Project {
 
     @JsonIgnore

@@ -16,7 +16,7 @@ public class Member {
 
     @JsonIgnore
     @Id
-    @Column(name = "member_id")
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 

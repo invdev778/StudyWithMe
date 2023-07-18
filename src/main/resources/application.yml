@@ -1,32 +1,29 @@
 spring:
+  profiles:
+    active: local
   main:
     allow-bean-definition-overriding: true
-  datasource:
-    jdbc-url: jdbc:mysql://43.201.83.222:3306/StudyWithUs
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    name: koreait
-    password: passwd2023@
-  jpa:
-    database-platform: org.hibernate.dialect.MySQL5Dialect
-    open-in-view: false
-    show-sql: true
-    hibernate:
-      format_sql: true
-      ddl-auto: create
+    datasource:
+      url: ${DATASOURCE_URL}
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: ${DATASOURCE_USERNAME}
+      password: ${DATASOURCE_PW}
+    jpa:
+      database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
 
 jwt:
-  secret-key: Z29nby10bS1zZXJ2ZXItZGxyamVvYW9yb3JodG9kZ290c3Atam9vbmdhbmduaW0teWvvbHnpbWhpaGFsZ2VveW8K
+  secret-key: ${JWT_SECRET}
 
 oauth:
   kakao:
-    client-id: c1bdfceae4fa27db44e9e244a7f2e1fa
+    client-id: ${KAKAO_CLIENT_ID}
     url:
       auth: https://kauth.kakao.com
       api: https://kapi.kakao.com
 
   naver:
-     secret: SoH3BzEtFq
-     client-id: JOiWuaZqH5Qj5O4A1m6e
+     client-id: ${NAVER_CLIENT_ID}
+     secret: ${NAVER_CLIENT_SECRET}
      url:
        auth: https://nid.naver.com/
        api: https://openapi.naver.com/
