@@ -20,7 +20,7 @@ public class Project {
 
     //@JsonIgnore
     @Id
-    @Column(name = "id")
+    //@Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
