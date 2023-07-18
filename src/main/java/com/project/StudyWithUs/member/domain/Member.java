@@ -9,25 +9,24 @@ import lombok.*;
 @Getter
 @Setter
 @Entity
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "Member")
 public class Member {
 
-    //@JsonIgnore
+    @JsonIgnore
     @Id
-    //@Column(name = "id")
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(name = "email")
     private String email;
 
-    @Column(nullable = false)
+    @Column(name = "nickname")
     private String nickname;
 
-    //@Column(name = "profile_image")
+    @Column(name = "profile_image")
     private String profile;
 
     private OAuthProvider oAuthProvider;

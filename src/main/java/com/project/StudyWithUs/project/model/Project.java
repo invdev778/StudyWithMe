@@ -3,7 +3,10 @@ package com.project.StudyWithUs.project.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.project.StudyWithUs.member.domain.Member;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
@@ -14,32 +17,30 @@ import java.util.Date;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 @Table(name = "Project")
 public class Project {
 
-    //@JsonIgnore
+    @JsonIgnore
     @Id
-    //@Column(name = "id")
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    //@ManyToOne(fetch = FetchType.LAZY)
     //@JoinColumn(name = "member_id")
     //@OnDelete(action = OnDeleteAction.CASCADE)
-    //@Column(name = "member_id")
-    private Member member_id;
+    @Column(name = "member_id")
+    private String member_id;
 
-    //@Column(name = "title")
+    @Column(name = "title")
     private String title;
 
-    @Lob
-    //@Column(name = "content")
+    @Column(name = "content")
     private String content;
 
-    //@Column(name = "end_date")
+    @Column(name = "end_date")
     private Date end_date;
 
-    //@Column(name = "rep_image")
+    @Column(name = "rep_image")
     private String rep_image;
 }
